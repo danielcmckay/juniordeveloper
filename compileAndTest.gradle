@@ -1,0 +1,40 @@
+task compileAndTestScriptDescription() {
+	ant.echo("Store all JavaCompile and JavaTestCompile code outside of the main build script")
+}
+
+
+//#####################################################################################################################
+//################################# Compiler Options ##################################################################
+//#####################################################################################################################
+compileJava {
+	options.encoding = 'UTF-8'
+	options.compilerArgs <<"-Xlint:all" << "-Werror"
+	options.fork = true
+}
+
+tasks.withType(JavaCompile) {
+	sourceCompatibility = requiredVersion
+	targetCompatibility = requiredVersion
+}
+
+
+//#####################################################################################################################
+//################################# Unit Test Options #################################################################
+//#####################################################################################################################
+compileTestJava {
+	options.encoding = 'UTF-8'
+	options.compilerArgs <<"-Xlint:all" << "-Werror"
+	options.fork = true
+}
+
+tasks.withType(Test) {
+	ignoreFailures = false
+	failFast = true
+	maxParallelForks = Runtime.runtime.availableProcessors()
+}
+
+test {
+	useJUnitPlatform {
+		includeEngines 'junit-jupiter','junit-vintage'
+	}
+}

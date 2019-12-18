@@ -1,0 +1,54 @@
+plugins {
+	id 'java'
+    id 'idea'
+	id 'eclipse'
+	id 'eclipse-wtp'
+}
+
+ext.requiredVersion = JavaVersion.VERSION_11
+sourceCompatibility = requiredVersion
+targetCompatibility = requiredVersion
+assert JavaVersion.current().isJava11(): "Java 11 is required"
+
+apply from: 'compileAndTest.gradle'	// Build and Test Tasks
+
+defaultTasks 'wrapper', 'idea', 'eclipse', 'clean', 'build', 'test'
+
+String vendor = 'Applicant'
+String appName = 'juniordeveloper'
+String description = 'juniordeveloper'
+String version = '1.0'
+
+ext.junitApiGuardianVersion = "1.1.0"
+ext.junitOpentest4jVersion = "1.2.0"
+ext.junitPlatformVersion = "1.5.2"
+ext.junitJupiterVersion = "5.5.2"
+ext.junitVintageVersion = "5.5.2"
+
+
+repositories {
+	mavenCentral()
+	jcenter()   
+}
+
+dependencies {
+	// Unit Testing ApiGuardian
+	testImplementation "org.apiguardian:apiguardian-api:${junitApiGuardianVersion}"
+	// Unit Testing OpenTest
+	testImplementation "org.opentest4j:opentest4j:${junitOpentest4jVersion}"
+	// Unit Testing JUnit
+	testImplementation "org.junit.platform:junit-platform-commons:${junitPlatformVersion}"
+	testImplementation "org.junit.platform:junit-platform-console:${junitPlatformVersion}"
+	testImplementation "org.junit.platform:junit-platform-engine:${junitPlatformVersion}"
+	testImplementation "org.junit.platform:junit-platform-launcher:${junitPlatformVersion}"
+	testImplementation "org.junit.platform:junit-platform-reporting:${junitPlatformVersion}"
+	testImplementation "org.junit.platform:junit-platform-runner:${junitPlatformVersion}"
+	testImplementation "org.junit.platform:junit-platform-suite-api:${junitPlatformVersion}"
+	testImplementation "org.junit.platform:junit-platform-testkit:${junitPlatformVersion}"
+	testImplementation "org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}"
+	testImplementation "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}"
+	testImplementation "org.junit.jupiter:junit-jupiter-params:${junitJupiterVersion}"
+	testImplementation "org.junit.jupiter:junit-jupiter-migrationsupport:${junitJupiterVersion}"
+	testImplementation "org.junit.vintage:junit-vintage-engine:${junitVintageVersion}"
+}
+
