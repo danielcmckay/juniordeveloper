@@ -1,0 +1,53 @@
+commit 6607cccf318573879cf183680d4611791f010a0c
+Author: Daniel <dcmckay10@gmail.com>
+Date:   Sun Jun 21 20:37:03 2020 -0600
+
+    changed print statement, ran gradlew build
+    
+    Signed-off-by: Daniel <dcmckay10@gmail.com>
+
+commit 2a3699983f735fabdfd72bb9d5b2b7415336b810
+Author: Daniel <dcmckay10@gmail.com>
+Date:   Sun Jun 21 16:04:40 2020 -0600
+
+    fixed testFuel file
+    
+    Signed-off-by: Daniel <dcmckay10@gmail.com>
+
+commit 2a3f421cfd8cc54593aa4231aa4e537ac2eaab9d
+Author: Daniel <dcmckay10@gmail.com>
+Date:   Sun Jun 21 15:58:45 2020 -0600
+
+    Initial commit
+    
+    Signed-off-by: Daniel <dcmckay10@gmail.com>
+
+commit bab558b344339faec9fa5284601256f1111a6228
+Author: Josh Parker <josh@alamon.com>
+Date:   Wed Dec 18 20:47:11 2019 +0000
+
+    Add instructions to README.md
+
+commit 9cff75f23552e6804f30a1dfd5ace7d315d611ac
+Author: Dennis R. Gesker <dennis@gesker.com>
+Date:   Wed Dec 18 13:22:37 2019 -0700
+
+    sample data
+
+commit 0ad3f2b0f56d386fa36d5ed77ade5bc9843384b6
+Author: Dennis R. Gesker <dennis@gesker.com>
+Date:   Wed Dec 18 12:09:56 2019 -0700
+
+    clean temp
+
+commit d19dfb385eb52e246d070fddd3d6374d002e285b
+Author: Dennis R. Gesker <dennis@gesker.com>
+Date:   Wed Dec 18 12:04:56 2019 -0700
+
+    initial
+
+commit b2dc791d3ce9e2e6164f17b2fc9c2e5fd6718170
+Author: Dennis Gesker <dennis@alamon.com>
+Date:   Wed Dec 18 18:56:42 2019 +0000
+
+    Initial commit
