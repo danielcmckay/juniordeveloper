@@ -1,15 +1,12 @@
 package juniordeveloper;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class fuelTest {
 
     @Test
     void checkFuelCalculation() {
-
-
         assertEquals(2, Main.fuelCalculation(12), "Fuel result for mass 12 should be 2");
         assertEquals(2, Main.fuelCalculation(14), "Fuel result for mass 14 should be 2");
         assertEquals(654, Main.fuelCalculation(1969), "Fuel result for mass 1969 should be 654");

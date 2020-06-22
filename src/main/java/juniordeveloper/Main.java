@@ -15,13 +15,11 @@ public class Main {
                 fuelCalculation(data);
             }
 
-
             myScanner.close();
         } catch (FileNotFoundException e) {
             System.out.println("Error " + e.getMessage());
         }
-
-        System.out.println(fuelTotal);
+        System.out.println("Total fuel required: " + fuelTotal);
     }
 
     public static double fuelCalculation(int mass) {
